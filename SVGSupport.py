@@ -2,6 +2,7 @@
 
 # pyright: reportMissingModuleSource=false
 
+from dataclasses import dataclass, field
 from typing import NamedTuple, Union
 import regex
 from more_itertools import chunked
@@ -18,6 +19,13 @@ class Point(NamedTuple):
         match other:
             case Point():
                 return Point(self.x + other.x, self.y + other.y)
+            case _:
+                raise TypeError()
+
+    def __sub__(self, other):
+        match other:
+            case Point():
+                return Point(self.x - other.x, self.y - other.y)
             case _:
                 raise TypeError()
     
@@ -72,19 +80,22 @@ class CubicBezierAbs(NamedTuple):
         return f'C {self.p1} {self.p2} {self.p3}'
 
 
-def cubic_bezier_abs_to_rel(point: Point, 
-                            abs_cubic_bezier: CubicBezierAbs):
-    return CubicBezierRel(
-        abs_cubic_bezier.p1 - point,
-        abs_cubic_bezier.p2 - point,
-        abs_cubic_bezier.p3 - point)
+@dataclass(frozen=True)
+class ShortcutBezierRel():
+    p2: Point
+    p3: Point
+    p0: Point = field(init=False)
+    p1: Point = field(init=False)
 
-def cubic_bezier_rel_to_abs(point: Point, 
-                            rel_cubic_bezier: CubicBezierRel):
-    return CubicBezierAbs(
-        rel_cubic_bezier.p1 + point,
-        rel_cubic_bezier.p2 + point,
-        rel_cubic_bezier.p3 + point)
+    def __init__(self, p0: Point, p1: Point, previous_bezier: CubicBezierRel):
+        self.p0 = p0
+        self.p1 = p1
+        self._previous_bezier = previous_bezier
+
+    def __post_init__(self):
+        self.p0 = self._previous_bezier.p3
+        self.p1 = self._previous_bezier.p2 - self._previous_bezier.p3
+
 
 def get_move_to_abs(args: list[float]):
     return MoveToAbs(Point(*args))
