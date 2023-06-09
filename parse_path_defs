@@ -1,0 +1,13 @@
+from pathlib import Path
+import regex
+
+COMMAND_RE = regex.compile(r'(?P<command>a-zA-Z)(\s(?P<args>-?\d+))*')
+
+path_defs = Path('path_defs.txt').read_text().splitlines()
+
+for path_def in path_defs:
+    for m in COMMAND_RE.finditer(path_def):
+        print(path_def)
+        print(m.capturesdict())
+
+

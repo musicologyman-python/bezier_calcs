@@ -1,0 +1,103 @@
+Variable                         Type                    Data/Info
+------------------------------------------------------------------
+AbstractCubicBezier              ABCMeta                 <class '__main__.AbstractCubicBezier'>
+CMD_WITH_PAIRED_ARGS_RE          Pattern                 regex.Regex('(?ix)(?P<com<...>x.I | regex.X | regex.V0)
+COMMAND_RE                       Pattern                 regex.Regex('(?ix)(?P<com<...>x.I | regex.X | regex.V0)
+ClosePath                        type                    <class '__main__.ClosePath'>
+CoordinatePair                   type                    <class '__main__.CoordinatePair'>
+CubicBezierAbs                   ABCMeta                 <class '__main__.CubicBezierAbs'>
+CubicBezierRel                   ABCMeta                 <class '__main__.CubicBezierRel'>
+Generator                        ABCMeta                 <class 'collections.abc.Generator'>
+HTML                             type                    <class 'IPython.core.display.HTML'>
+Iterator                         ABCMeta                 <class 'collections.abc.Iterator'>
+Matrix                           type                    <class 'sympy.matrices.dense.MutableDenseMatrix'>
+MoveTo                           type                    <class '__main__.MoveTo'>
+NSMAP                            dict                    n=2
+Point                            type                    <class '__main__.Point'>
+RAW_CMD_RE                       Pattern                 regex.Regex('(?ix)[clmsvz<...>x.I | regex.X | regex.V0)
+ShorthandCubicBezierRel          ABCMeta                 <class '__main__.ShorthandCubicBezierRel'>
+SimpleCommand                    type                    <class '__main__.SimpleCommand'>
+Symbol                           type                    <class 'sympy.core.symbol.Symbol'>
+abc                              module                  <module 'abc' from '/usr/<...>0/lib/python3.10/abc.py'>
+as_path                          str                     <path d="M 213.0, 112.0 c<...> -88.0" class="special"/>
+b                                CubicBezierAbs          C 168.0, 112.0 144.0, 78.0 144.0, 24.0
+b3                               Mul                     t**k*(1 - t)**(3 - k)*binomial(3, k)
+bernstein_polynomial             Mul                     t**k*(1 - t)**(-k + n)*binomial(n, k)
+chunked                          function                <function chunked at 0x10bee71c0>
+cmd                              SimpleCommand           z     
+commands_with_points             list                    n=12
+compose_left                     function                <function compose_left at 0x10eea4820>
+cubic_bernstein_polynomial       Mul                     t**k*(1 - t)**(3 - k)*binomial(3, k)
+cubic_bezier                     Add                     P_0*(1 - t)**3 + 3*P_1*t*<...>2*t**2*(1 - t) + P_3*t**3
+curried                          module                  <module 'toolz.curried' f<...>olz/curried/__init__.py'>
+curry                            type                    <class 'toolz.functoolz.curry'>
+d1b                              ImmutableDenseMatrix    Matrix([[864.0*t*(1 - t) <...>t) + 336.0*t*(2*t - 2)]])
+d1bx                             ImmutableDenseMatrix    Matrix([[864.0*t*(1 - t) <...> 2) - 135.0*(1 - t)**2]])
+d1by                             ImmutableDenseMatrix    Matrix([[-162.0*t**2 + 46<...>t) + 336.0*t*(2*t - 2)]])
+d1cubic_bezier                   Add                     -3*P_0*(1 - t)**2 + 3*P_1<...>_2*t*(1 - t) + 3*P_3*t**2
+dataclass                        function                <function dataclass at 0x10cdc1000>
+def_                             _Element                <Element {http://www.w3.o<...>000/svg}g at 0x11265eac0>
+defs                             list                    n=5
+diff                             function                <function diff at 0x10f5ad1b0>
+etree                            module                  <module 'lxml.etree' from<...>e.cpython-310-darwin.so'>
+field                            function                <function field at 0x10c8ffbe0>
+fp                               StringIO                <_io.StringIO object at 0x11266ac20>
+get_abs_cubic_beziers            function                <function get_abs_cubic_beziers at 0x11266bc70>
+get_axes                         function                <function get_axes at 0x112669ea0>
+get_commands                     Compose                 Compose(<class 'list'>, <<...>emplates at 0x10eed3ac0>)
+get_commands_from_templates      function                <function get_commands_fr<...>templates at 0x10eed3490>
+get_control_points               Compose                 Compose(<class 'list'>, <<...>commands at 0x11266bbe0>)
+get_cubic_bernstein_polynomial   function                <function get_cubic_berns<...>olynomial at 0x1122d9510>
+get_element_string               function                <function get_element_string at 0x10eed3370>
+get_grid_lines                   function                <function get_grid_lines at 0x112669e10>
+get_members                      function                <function get_members at 0x10ebaa290>
+get_path_def                     function                <function get_path_def at 0x10eed30a0>
+get_path_defs                    Compose                 Compose(<class 'list'>, <<...>emplates at 0x10eed3ac0>)
+get_paths_from_control_points    function                <function get_paths_from_<...>ol_points at 0x11266bd00>
+get_points                       function                <function get_points at 0x1125953f0>
+get_simple_commands              function                <function get_simple_commands at 0x11266bbe0>
+grid                             str                     <g><line x1="-25" y1="0" <...>="250" class="axis"/></g>
+grid_lines                       str                     <line x1="-25" y1="0" x2=<...>" y2="250" class="axis"/>
+horizontal_line                  function                <function horizontal_line at 0x112669cf0>
+horizontal_tangent_points        list                    n=1
+init_printing                    function                <function init_printing at 0x11213c790>
+inspect                          module                  <module 'inspect' from '/<...>b/python3.10/inspect.py'>
+json                             module                  <module 'json' from '/usr<...>on3.10/json/__init__.py'>
+k                                int                     3
+line                             function                <function line at 0x112669c60>
+make_typed_commands              function                <function make_typed_commands at 0x112669510>
+p                                list                    n=4
+p0                               Point                   213.0, 112.0
+p1                               Point                   168.0, 112.0
+p2                               Point                   144.0, 78.0
+p3                               Point                   144.0, 24.0
+pairwise                         type                    <class 'itertools.pairwise'>
+parse_attr_dict                  function                <function parse_attr_dict at 0x112669bd0>
+parse_command                    function                <function parse_command at 0x11266bb50>
+parse_coordinates                function                <function parse_coordinates at 0x11266b370>
+parse_path_def                   function                <function parse_path_def at 0x10eed32e0>
+partial                          type                    <class 'functools.partial'>
+pipe                             function                <function pipe at 0x10eea48b0>
+pprint                           function                <function pprint at 0x10c8ff6d0>
+print_element                    Compose                 Compose(<built-in functio<...>t_string at 0x10eed3370>)
+print_path_attribute             function                <function print_path_attribute at 0x10eed36d0>
+print_templates                  function                <function print_templates at 0x10eed3130>
+pyperclip                        module                  <module 'pyperclip' from <...>s/pyperclip/__init__.py'>
+read_templates                   function                <function read_templates at 0x10eed3ac0>
+reformat_path_def                function                <function reformat_path_def at 0x11266af80>
+regex                            module                  <module 'regex' from '/us<...>kages/regex/__init__.py'>
+s                                str                     M 213 112                <...>245 136                 z
+solution                         Float                   1.00000000000000
+solutions                        generator               <generator object <genexpr> at 0x11255fae0>
+solve                            function                <function solve at 0x111f6ac20>
+sp                               StringIO                <_io.StringIO object at 0x1126697e0>
+substitution_dict                dict                    n=4
+svg                              function                <function svg at 0x112669f30>
+svg_doc                          str                     <svg viewbox="0 0 700 600<...>ss="axis"/></g></g></svg>
+sympify                          function                <function sympify at 0x10f3e31c0>
+t                                CubicBezierAbs          C 168.0, 112.0 144.0, 78.0 144.0, 24.0
+typed_commands                   list                    n=12
+typing                           module                  <module 'typing' from '/u<...>ib/python3.10/typing.py'>
+vectors                          list                    n=4
+vertical_line                    function                <function vertical_line at 0x112669d80>
+vertical_tangent_points          list                    n=1

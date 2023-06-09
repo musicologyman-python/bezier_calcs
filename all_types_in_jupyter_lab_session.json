@@ -1,0 +1,507 @@
+[
+  {
+    "variable": "AbstractCubicBezier",
+    "type": "ABCMeta",
+    "data_info": "<class '__main__.AbstractCubicBezier'>"
+  },
+  {
+    "variable": "CMD_WITH_PAIRED_ARGS_RE",
+    "type": "Pattern",
+    "data_info": "regex.Regex('(?ix)(?P<com<...>x.I | regex.X | regex.V0)"
+  },
+  {
+    "variable": "COMMAND_RE",
+    "type": "Pattern",
+    "data_info": "regex.Regex('(?ix)(?P<com<...>x.I | regex.X | regex.V0)"
+  },
+  {
+    "variable": "ClosePath",
+    "type": "type",
+    "data_info": "<class '__main__.ClosePath'>"
+  },
+  {
+    "variable": "CoordinatePair",
+    "type": "type",
+    "data_info": "<class '__main__.CoordinatePair'>"
+  },
+  {
+    "variable": "CubicBezierAbs",
+    "type": "ABCMeta",
+    "data_info": "<class '__main__.CubicBezierAbs'>"
+  },
+  {
+    "variable": "CubicBezierRel",
+    "type": "ABCMeta",
+    "data_info": "<class '__main__.CubicBezierRel'>"
+  },
+  {
+    "variable": "Generator",
+    "type": "ABCMeta",
+    "data_info": "<class 'collections.abc.Generator'>"
+  },
+  {
+    "variable": "HTML",
+    "type": "type",
+    "data_info": "<class 'IPython.core.display.HTML'>"
+  },
+  {
+    "variable": "Iterator",
+    "type": "ABCMeta",
+    "data_info": "<class 'collections.abc.Iterator'>"
+  },
+  {
+    "variable": "Matrix",
+    "type": "type",
+    "data_info": "<class 'sympy.matrices.dense.MutableDenseMatrix'>"
+  },
+  {
+    "variable": "MoveTo",
+    "type": "type",
+    "data_info": "<class '__main__.MoveTo'>"
+  },
+  {
+    "variable": "NSMAP",
+    "type": "dict",
+    "data_info": "n=2"
+  },
+  {
+    "variable": "Point",
+    "type": "type",
+    "data_info": "<class '__main__.Point'>"
+  },
+  {
+    "variable": "RAW_CMD_RE",
+    "type": "Pattern",
+    "data_info": "regex.Regex('(?ix)[clmsvz<...>x.I | regex.X | regex.V0)"
+  },
+  {
+    "variable": "ShorthandCubicBezierRel",
+    "type": "ABCMeta",
+    "data_info": "<class '__main__.ShorthandCubicBezierRel'>"
+  },
+  {
+    "variable": "SimpleCommand",
+    "type": "type",
+    "data_info": "<class '__main__.SimpleCommand'>"
+  },
+  {
+    "variable": "Symbol",
+    "type": "type",
+    "data_info": "<class 'sympy.core.symbol.Symbol'>"
+  },
+  {
+    "variable": "abc",
+    "type": "module",
+    "data_info": "<module 'abc' from '/usr/<...>0/lib/python3.10/abc.py'>"
+  },
+  {
+    "variable": "as_path",
+    "type": "str",
+    "data_info": "<path d=\"M 213.0, 112.0 c<...> -88.0\" class=\"special\"/>"
+  },
+  {
+    "variable": "b",
+    "type": "CubicBezierAbs",
+    "data_info": "C 168.0, 112.0 144.0, 78.0 144.0, 24.0"
+  },
+  {
+    "variable": "b3",
+    "type": "Mul",
+    "data_info": "t**k*(1 - t)**(3 - k)*binomial(3, k)"
+  },
+  {
+    "variable": "bernstein_polynomial",
+    "type": "Mul",
+    "data_info": "t**k*(1 - t)**(-k + n)*binomial(n, k)"
+  },
+  {
+    "variable": "chunked",
+    "type": "function",
+    "data_info": "<function chunked at 0x10bee71c0>"
+  },
+  {
+    "variable": "cmd",
+    "type": "SimpleCommand",
+    "data_info": "z"
+  },
+  {
+    "variable": "commands_with_points",
+    "type": "list",
+    "data_info": "n=12"
+  },
+  {
+    "variable": "compose_left",
+    "type": "function",
+    "data_info": "<function compose_left at 0x10eea4820>"
+  },
+  {
+    "variable": "cubic_bernstein_polynomial",
+    "type": "Mul",
+    "data_info": "t**k*(1 - t)**(3 - k)*binomial(3, k)"
+  },
+  {
+    "variable": "cubic_bezier",
+    "type": "Add",
+    "data_info": "P_0*(1 - t)**3 + 3*P_1*t*<...>2*t**2*(1 - t) + P_3*t**3"
+  },
+  {
+    "variable": "curried",
+    "type": "module",
+    "data_info": "<module 'toolz.curried' f<...>olz/curried/__init__.py'>"
+  },
+  {
+    "variable": "curry",
+    "type": "type",
+    "data_info": "<class 'toolz.functoolz.curry'>"
+  },
+  {
+    "variable": "d1b",
+    "type": "ImmutableDenseMatrix",
+    "data_info": "Matrix([[864.0*t*(1 - t) <...>t) + 336.0*t*(2*t - 2)]])"
+  },
+  {
+    "variable": "d1bx",
+    "type": "ImmutableDenseMatrix",
+    "data_info": "Matrix([[864.0*t*(1 - t) <...> 2) - 135.0*(1 - t)**2]])"
+  },
+  {
+    "variable": "d1by",
+    "type": "ImmutableDenseMatrix",
+    "data_info": "Matrix([[-162.0*t**2 + 46<...>t) + 336.0*t*(2*t - 2)]])"
+  },
+  {
+    "variable": "d1cubic_bezier",
+    "type": "Add",
+    "data_info": "-3*P_0*(1 - t)**2 + 3*P_1<...>_2*t*(1 - t) + 3*P_3*t**2"
+  },
+  {
+    "variable": "dataclass",
+    "type": "function",
+    "data_info": "<function dataclass at 0x10cdc1000>"
+  },
+  {
+    "variable": "def_",
+    "type": "_Element",
+    "data_info": "<Element {http://www.w3.o<...>000/svg}g at 0x11265eac0>"
+  },
+  {
+    "variable": "defs",
+    "type": "list",
+    "data_info": "n=5"
+  },
+  {
+    "variable": "diff",
+    "type": "function",
+    "data_info": "<function diff at 0x10f5ad1b0>"
+  },
+  {
+    "variable": "etree",
+    "type": "module",
+    "data_info": "<module 'lxml.etree' from<...>e.cpython-310-darwin.so'>"
+  },
+  {
+    "variable": "field",
+    "type": "function",
+    "data_info": "<function field at 0x10c8ffbe0>"
+  },
+  {
+    "variable": "fp",
+    "type": "StringIO",
+    "data_info": "<_io.StringIO object at 0x11266ac20>"
+  },
+  {
+    "variable": "get_abs_cubic_beziers",
+    "type": "function",
+    "data_info": "<function get_abs_cubic_beziers at 0x11266bc70>"
+  },
+  {
+    "variable": "get_axes",
+    "type": "function",
+    "data_info": "<function get_axes at 0x112669ea0>"
+  },
+  {
+    "variable": "get_commands",
+    "type": "Compose",
+    "data_info": "Compose(<class 'list'>, <<...>emplates at 0x10eed3ac0>)"
+  },
+  {
+    "variable": "get_commands_from_templates",
+    "type": "function",
+    "data_info": "<function get_commands_fr<...>templates at 0x10eed3490>"
+  },
+  {
+    "variable": "get_control_points",
+    "type": "Compose",
+    "data_info": "Compose(<class 'list'>, <<...>commands at 0x11266bbe0>)"
+  },
+  {
+    "variable": "get_cubic_bernstein_polynomial",
+    "type": "function",
+    "data_info": "<function get_cubic_berns<...>olynomial at 0x1122d9510>"
+  },
+  {
+    "variable": "get_element_string",
+    "type": "function",
+    "data_info": "<function get_element_string at 0x10eed3370>"
+  },
+  {
+    "variable": "get_grid_lines",
+    "type": "function",
+    "data_info": "<function get_grid_lines at 0x112669e10>"
+  },
+  {
+    "variable": "get_members",
+    "type": "function",
+    "data_info": "<function get_members at 0x10ebaa290>"
+  },
+  {
+    "variable": "get_path_def",
+    "type": "function",
+    "data_info": "<function get_path_def at 0x10eed30a0>"
+  },
+  {
+    "variable": "get_path_defs",
+    "type": "Compose",
+    "data_info": "Compose(<class 'list'>, <<...>emplates at 0x10eed3ac0>)"
+  },
+  {
+    "variable": "get_paths_from_control_points",
+    "type": "function",
+    "data_info": "<function get_paths_from_<...>ol_points at 0x11266bd00>"
+  },
+  {
+    "variable": "get_points",
+    "type": "function",
+    "data_info": "<function get_points at 0x1125953f0>"
+  },
+  {
+    "variable": "get_simple_commands",
+    "type": "function",
+    "data_info": "<function get_simple_commands at 0x11266bbe0>"
+  },
+  {
+    "variable": "grid",
+    "type": "str",
+    "data_info": "<g><line x1=\"-25\" y1=\"0\" <...>=\"250\" class=\"axis\"/></g>"
+  },
+  {
+    "variable": "grid_lines",
+    "type": "str",
+    "data_info": "<line x1=\"-25\" y1=\"0\" x2=<...>\" y2=\"250\" class=\"axis\"/>"
+  },
+  {
+    "variable": "horizontal_line",
+    "type": "function",
+    "data_info": "<function horizontal_line at 0x112669cf0>"
+  },
+  {
+    "variable": "horizontal_tangent_points",
+    "type": "list",
+    "data_info": "n=1"
+  },
+  {
+    "variable": "init_printing",
+    "type": "function",
+    "data_info": "<function init_printing at 0x11213c790>"
+  },
+  {
+    "variable": "inspect",
+    "type": "module",
+    "data_info": "<module 'inspect' from '/<...>b/python3.10/inspect.py'>"
+  },
+  {
+    "variable": "json",
+    "type": "module",
+    "data_info": "<module 'json' from '/usr<...>on3.10/json/__init__.py'>"
+  },
+  {
+    "variable": "k",
+    "type": "int",
+    "data_info": "3"
+  },
+  {
+    "variable": "line",
+    "type": "function",
+    "data_info": "<function line at 0x112669c60>"
+  },
+  {
+    "variable": "make_typed_commands",
+    "type": "function",
+    "data_info": "<function make_typed_commands at 0x112669510>"
+  },
+  {
+    "variable": "p",
+    "type": "list",
+    "data_info": "n=4"
+  },
+  {
+    "variable": "p0",
+    "type": "Point",
+    "data_info": "213.0, 112.0"
+  },
+  {
+    "variable": "p1",
+    "type": "Point",
+    "data_info": "168.0, 112.0"
+  },
+  {
+    "variable": "p2",
+    "type": "Point",
+    "data_info": "144.0, 78.0"
+  },
+  {
+    "variable": "p3",
+    "type": "Point",
+    "data_info": "144.0, 24.0"
+  },
+  {
+    "variable": "pairwise",
+    "type": "type",
+    "data_info": "<class 'itertools.pairwise'>"
+  },
+  {
+    "variable": "parse_attr_dict",
+    "type": "function",
+    "data_info": "<function parse_attr_dict at 0x112669bd0>"
+  },
+  {
+    "variable": "parse_command",
+    "type": "function",
+    "data_info": "<function parse_command at 0x11266bb50>"
+  },
+  {
+    "variable": "parse_coordinates",
+    "type": "function",
+    "data_info": "<function parse_coordinates at 0x11266b370>"
+  },
+  {
+    "variable": "parse_path_def",
+    "type": "function",
+    "data_info": "<function parse_path_def at 0x10eed32e0>"
+  },
+  {
+    "variable": "partial",
+    "type": "type",
+    "data_info": "<class 'functools.partial'>"
+  },
+  {
+    "variable": "pipe",
+    "type": "function",
+    "data_info": "<function pipe at 0x10eea48b0>"
+  },
+  {
+    "variable": "pprint",
+    "type": "function",
+    "data_info": "<function pprint at 0x10c8ff6d0>"
+  },
+  {
+    "variable": "print_element",
+    "type": "Compose",
+    "data_info": "Compose(<built-in functio<...>t_string at 0x10eed3370>)"
+  },
+  {
+    "variable": "print_path_attribute",
+    "type": "function",
+    "data_info": "<function print_path_attribute at 0x10eed36d0>"
+  },
+  {
+    "variable": "print_templates",
+    "type": "function",
+    "data_info": "<function print_templates at 0x10eed3130>"
+  },
+  {
+    "variable": "pyperclip",
+    "type": "module",
+    "data_info": "<module 'pyperclip' from <...>s/pyperclip/__init__.py'>"
+  },
+  {
+    "variable": "read_templates",
+    "type": "function",
+    "data_info": "<function read_templates at 0x10eed3ac0>"
+  },
+  {
+    "variable": "reformat_path_def",
+    "type": "function",
+    "data_info": "<function reformat_path_def at 0x11266af80>"
+  },
+  {
+    "variable": "regex",
+    "type": "module",
+    "data_info": "<module 'regex' from '/us<...>kages/regex/__init__.py'>"
+  },
+  {
+    "variable": "s",
+    "type": "str",
+    "data_info": "M 213 112                <...>245 136                 z"
+  },
+  {
+    "variable": "solution",
+    "type": "Float",
+    "data_info": "1.00000000000000"
+  },
+  {
+    "variable": "solutions",
+    "type": "generator",
+    "data_info": "<generator object <genexpr> at 0x11255fae0>"
+  },
+  {
+    "variable": "solve",
+    "type": "function",
+    "data_info": "<function solve at 0x111f6ac20>"
+  },
+  {
+    "variable": "sp",
+    "type": "StringIO",
+    "data_info": "<_io.StringIO object at 0x1126697e0>"
+  },
+  {
+    "variable": "substitution_dict",
+    "type": "dict",
+    "data_info": "n=4"
+  },
+  {
+    "variable": "svg",
+    "type": "function",
+    "data_info": "<function svg at 0x112669f30>"
+  },
+  {
+    "variable": "svg_doc",
+    "type": "str",
+    "data_info": "<svg viewbox=\"0 0 700 600<...>ss=\"axis\"/></g></g></svg>"
+  },
+  {
+    "variable": "sympify",
+    "type": "function",
+    "data_info": "<function sympify at 0x10f3e31c0>"
+  },
+  {
+    "variable": "t",
+    "type": "CubicBezierAbs",
+    "data_info": "C 168.0, 112.0 144.0, 78.0 144.0, 24.0"
+  },
+  {
+    "variable": "typed_commands",
+    "type": "list",
+    "data_info": "n=12"
+  },
+  {
+    "variable": "typing",
+    "type": "module",
+    "data_info": "<module 'typing' from '/u<...>ib/python3.10/typing.py'>"
+  },
+  {
+    "variable": "vectors",
+    "type": "list",
+    "data_info": "n=4"
+  },
+  {
+    "variable": "vertical_line",
+    "type": "function",
+    "data_info": "<function vertical_line at 0x112669d80>"
+  },
+  {
+    "variable": "vertical_tangent_points",
+    "type": "list",
+    "data_info": "n=1"
+  }
+]
