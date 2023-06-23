@@ -3,8 +3,13 @@ from collections.abc import Iterable, Mapping
 import dataclasses
 import functools
 import io
+from itertools import chain
+import logging
 from pathlib import Path
 from pprint import pprint
+from typing import Any
+
+from more_itertools import flatten
 import regex
 
 #%%
@@ -15,7 +20,6 @@ def read_path_def_strings(filename='path_defs.txt') -> list[str]:
     return Path('path_defs.txt').read_text().splitlines()
 
 #%%
-
 @dataclasses.dataclass
 class Point():
     ''' A class representing a point on a Cartesian plane
@@ -23,13 +27,21 @@ class Point():
     x: int
     y: int
 
+    def __rmul(self: 'Point', other: int) -> 'Point':
+        ''' Corresponds to scalar multiplication
+        '''
+        return Point(self.x * other, self.y * other)
+
     def __add__(self: 'Point', other: 'Point') -> 'Point':
         return Point(self.x + other.x, self.y + other.y)
     
+    def __sub__(self: 'Point', other: 'Point') -> 'Point':
+        return Point(self.x - other.x, self.y - other.y)
+    
     def __repr__(self):
         return f'{self.__class__.__name__}(x={self.x}, y={self.y})'
-
     
+
 class PathDefCommand():
     ''' Represents one instruction in the `d` attribute of an SVG `path` element.
     '''
@@ -100,6 +112,75 @@ for ppd in parsed_path_defs:
 
 # %%
 
-def relative_to_absolute(rel_path_def: PathDefCommand) -> PathDefCommand:
-    for pd in PathDefCommand:
-        pd['command']
+def relative_to_absolute(rel_path_def: Iterable[PathDefCommand]) -> Iterable[PathDefCommand]:
+    offset = Point(x=0, y=0)
+    next_tangent = Point(x=0, y=0)
+    pdc: PathDefCommand
+    for pdc in rel_path_def:
+        match pdc.command:
+            case 'M':
+                yield pdc
+            case 'z':
+                yield pdc 
+            case 'c':
+                next_pdc = PathDefCommand(
+                    command = pdc.command.upper(),
+                    args=[offset + arg for arg in pdc.args]
+                )
+                next_tangent = next_pdc.args[-1] - next_pdc.args[-2]
+                yield next_pdc
+            case 'l':
+                yield PathDefCommand(
+                    command = pdc.command.upper(),
+                    args=[offset + arg for arg in pdc.args]
+                )
+            case 's':
+                next_pdc = PathDefCommand(
+                    command = 'C',
+                    args = [offset + next_tangent, 
+                            offset + pdc.args[0], 
+                            offset + pdc.args[1]]
+                ) 
+                next_tangent = next_pdc.args[-1] - next_pdc.args[-2]
+                yield next_pdc
+            case _:
+                logging.debug(f'The command {pdc.command}was not handled')
+
+        if pdc.args:
+            offset = offset + pdc.args[-1]
+# %%
+
+absolute_path_defs = [list(relative_to_absolute(parsed_path_def))
+                     for parsed_path_def in parsed_path_defs]
+
+pprint(absolute_path_defs)
+# %%
+for apd in absolute_path_defs:
+    print(to_command_string(apd))
+# %%
+def find_extrema(path_defs: Iterable[PathDefCommand]) -> Any:
+    pdc: PathDefCommand
+    all_points = list(flatten([pdc.args for pdc in path_defs]))
+    return {
+        "min_x" : min([p.x for p in all_points]),
+        "max_x" : max([p.x for p in all_points]),
+        "min_y" : min([p.y for p in all_points]),
+        "max_y" : max([p.y for p in all_points])
+    }
+   
+
+for apd in absolute_path_defs:
+    pprint(find_extrema(apd))
+# %%
+
+with open('absolute_curves.xml', mode='w') as fp:
+    printf = functools.partial(print, file=fp)
+    printf('<xml>')
+    for rpd in parsed_path_defs:
+        printf(f'<path d="{to_command_string(rpd).strip()}" class="relative"/>')
+        
+    for apd in absolute_path_defs:
+        printf(f'<path d="{to_command_string(apd).strip()}" class="absolute"/>')
+    printf('</xml>')
+
+    

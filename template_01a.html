@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>SVG Template</title>
+        <style>
+            path {fill: none; stroke: black; stroke-width: 3}
+            rect {fill: none; stroke: black; stroke-width: 5}
+            rect:nth-of-type(2) {fill: none; stroke: red; stroke-width: 5}
+            line {stroke: lightblue; stroke-width: 3}
+            circle.blue_point {fill: blue; stroke: blue;r: 5}
+        </style>
+    </head>
+    <body>
+        <svg width="1500" height="650" >
+          <def>
+            <circle id="point" class="blue_point"/>
+          </def>
+          <rect x="25" y="25" width="600" height="400"/>
+          <g transform="translate(50,225) scale(1, 1)">
+            <line x1="0" y1="0" x2="550" y2="0"/>
+            <line x1="0" y1="-175" x2="0" y2="175"/>
+            <use href="#point" x="213" y="112"/>
+            <path d="M 213 112 
+                     c -45 0 -69 -34 -69 -88 
+                     c 0 -102 89 -136 134 -136 
+                     s 69 34 69 88 
+                     c 0 102 -89 136 -134 136 
+                     z 
+                     M 245 136 
+                     c 144 0 246 -65 246 -136 
+                     s -102 -136 -246 -136 
+                     s -245 65 -245 136 
+                     s 101 136 245 136 
+                     z"/> 
+          </g>
+          <rect x="650" y="25" width="600" height="400"/>
+          <g transform="translate(675,225) scale(1, 1)">
+            <line x1="0" y1="0" x2="550" y2="0"/>
+            <line x1="0" y1="-175" x2="0" y2="175"/>
+            <use href="#point" x="213" y="112"/>
+            <use href="#point" x="144" y="24"/>
+            <use href="#point" x="278" y="-234"/>
+            <path d="M 213 112 
+                     C 168 112 144 78 144 24 
+                     C 144 -78 223 -112 278 -112
+                     C 134 -136 134 -82 203 -102 203 -48 
+                     C 69 190 -20 224 -65 224 
+                     z 
+                     M 245 136 
+                     C 389 136 491 71 491 0 
+                     C 246 -136 102 -136 144 -272 0 -272 
+                     C -246 -136 -246 -65 -491 -71 -491 0 
+                     C -245 136 -101 136 -144 272 0 272 z"/> 
+          </g>
+        </svg>
+    </body>
+</html>
